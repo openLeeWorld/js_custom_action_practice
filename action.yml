@@ -1,0 +1,15 @@
+name: 'Argument Counter' # 이 액션의 이름(필수)
+description: 'Count # of arguments passed in' # 액션 설명(필수)
+inputs: # 액션 입력값 (선택)
+  arguments-to-count: # input id
+    description: 'arguments to count'
+    required: true
+    default: ''
+outputs: # 액션 출력값(선택)
+  argcount: # arg-count가 인식이 안되서 argCount로 바꿈
+    description: "Count of arguments passed in"
+runs: # 액션 실제 실행
+  using: "node16" # 액션 타입: js 액션, 반드시 node16을 지정
+  main: 'index.js' # 기본 자바스크립트 파일 지정
+  
+
